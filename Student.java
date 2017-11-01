@@ -23,6 +23,13 @@ public class Student
         name = fullName;
         id = studentID;
         credits = 0;
+        
+        if (fullName.length()<4){
+            System.out.println("Nombre demasiado corto");
+        } 
+        if (studentID.length()<3){
+            System.out.println("ID demasiado corto");
+        }
     }
 
     /**
