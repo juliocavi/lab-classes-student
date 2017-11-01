@@ -27,6 +27,7 @@ public class Student
         if (fullName.length()<4){
             System.out.println("Nombre demasiado corto");
         } 
+        
         if (studentID.length()<3){
             System.out.println("ID demasiado corto");
         }
@@ -79,7 +80,26 @@ public class Student
      */
     public String getLoginName()
     {
-        return name.substring(0,4) + id.substring(0,3);
+        String nameId;
+        String nameSub;
+        String idSub;
+        
+        if (name.length() >= 4){
+            nameSub = name.substring(0,4);
+        }
+        else{
+            nameSub = name;
+        }
+                
+        if (id.length() >= 3){
+            idSub = id.substring(0,3);
+        }
+        else{
+            idSub = id;
+        }
+        
+        nameId = nameSub + idSub;
+        return nameId;
     }
     
     /**
